@@ -13,4 +13,4 @@ jobs:
           persist-credentials: false
 
       - name: Install 🔧
-        run: git --help
+        run: git diff
