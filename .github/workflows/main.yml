@@ -13,4 +13,4 @@ jobs:
           persist-credentials: false
 
       - name: Install 🔧
-        run: git report > report.csv
+        run: git log
