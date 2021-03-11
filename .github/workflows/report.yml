@@ -1,5 +1,16 @@
-name: Send custom variable to Meercode Build
-  uses: meercodeio
-  with:
-    meercode-token: 'rPd2jCAy5CyWWutFXU03BDcDzQhgKJCG'
-    url: 'YOUR_CUSTOM_URL'
+name: Node CI
+
+on: push
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: Install 🔧
+        run: git log
