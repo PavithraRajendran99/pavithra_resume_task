@@ -1,16 +1,7 @@
-name: Node CI
+task: PowerShell@2
+    inputs:
+      targetType: 'inline'
+      script: 'Write-Host "This is me running PowerShell code!'
+      pwsh: true
 
-on: push
-
-jobs:
-  build:
-    runs-on: windows-latest
-
-    steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v2
-        with:
-          persist-credentials: false
-
-      - name: Install 🔧
-        run: git log
+- pwsh: 'Write-Host "This is me running PowerShell code!"'
