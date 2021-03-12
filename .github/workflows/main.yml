@@ -13,4 +13,4 @@ jobs:
           persist-credentials: true
 
       - name: Install 🔧
-        run: ./gitstats -h
+        run: git log --since='last month' --pretty=format:'%h;%an;%ad;%s' --author='PavithraRajendran99' > ~/log.csv
